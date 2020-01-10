@@ -1,0 +1,80 @@
+<foreach name="house" item="value">
+<tr>
+    <td >
+        {$a++}
+    </td>
+    <td>
+        <img alt="image" class="" src="__PUBLIC__/Thumb/{$value.image}" style="width: 150px;height: 100px;" />
+    </td>
+    <td >
+        {$value.house_name}
+    </td>
+    <td >
+        {$value.style_name}
+    </td>
+    <td >
+        {$value.type_name}
+    </td>
+    <td >
+        {$value.size}m&sup2
+    </td>
+    <td >
+        {$value.designer_name}
+    </td>
+    <td>
+       {$value.all_price}万
+    </td>
+    <td>
+       {$value.addtime|date="Y-m-d",###}
+    </td>
+    <td>
+        <a href="{:U('Admin/House/house_edit/id/'.$value['id'])}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>                                        
+        <a href="javascript:void(0)" class="btn btn-white btn-sm del" del_id="{$value.id}"><i class="fa fa-trash"></i> 删除 </a>
+    </td>
+</tr>
+</foreach>
+<tr>
+    <td colspan="10" class="page" style="padding: 15px 10px;border:none;">
+        <div id="editable_paginate" class="dataTables_paginate paging_simple_numbers">
+          <ul class="pagination page" style="margin: 0;">
+            {$show}
+          </ul>
+        </div>
+    </td>
+</tr>
+<script>
+   $(".del").click(function() {
+        var del_id=$(this).attr("del_id");
+        var tr=$(this).parent('td').parent('tr');
+          swal({
+              title: "您确定要删除这条信息吗",
+              text: "删除后将无法恢复，请谨慎操作！",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#1647a1",
+              confirmButtonText: "确定",
+              cancelButtonText: "取消",
+              closeOnConfirm: false,
+              closeOnCancel: false
+          }, function(isConfirm) {
+              if (isConfirm) {
+                $.ajax({
+                  type:'post',
+                  url:"{:U('Admin/House/house_del')}",
+                  data:"del_id="+del_id,
+                  dataType:'text',
+                  success:function(z){
+                    if(z){
+                      swal("删除成功！", "您已经永久删除了这条信息。", "success");
+                      tr.remove();
+                    }else{
+                      swal("数据输入有误", "请联系管理员");
+                    }
+                  }
+                });
+              } else {
+                  swal("已取消", "您取消了删除操作！", "error")
+              }
+          })
+  })
+</script>

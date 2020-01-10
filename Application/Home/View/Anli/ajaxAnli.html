@@ -1,0 +1,32 @@
+<dl id="dl">
+	<empty name="house">
+		<h1 style="color:#ccc;text-align:center;font-size:24px;margin-top:20px;">暂无相关案例信息</h1>
+	<else/>
+		<foreach name="house" item="value">
+			<dd>
+				<i><a href="{:U('Home/Anli/anli_art/id/'.$value['id'])}">了解详细</a></i>
+				<a href="">
+					<label><a href="{:U('Home/Anli/anli_art/id/'.$value['id'])}"><img src="__PUBLIC__/{$value.image}" style="width: 386px;height: 240px;"></a></label>
+					<div>
+						<h4>{$value.house_name}</h4>
+						<foreach name="style" item="v">
+							<eq name="value.style_id" value="$v.id">
+								<span>{$value.all_price}万丨 {$v.style_name}丨 {$value.size}m²</span>
+							</eq>
+						</foreach>
+					</div>
+				</a>
+			</dd>
+		</foreach>
+	</empty>
+	
+	</dl>
+<div class="pags">
+<ul class="pagination">
+    {$show}
+</ul>
+</div>
+
+ <script>
+
+ </script>

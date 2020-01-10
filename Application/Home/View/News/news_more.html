@@ -1,0 +1,62 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/insidepublic_1.css" rel="stylesheet"/>
+<div class="container top" style="position: relative;">
+    <h3 style="position: absolute;left:0;padding-left: 15px;background-position: -4px center;">
+        <a href="{:U('Home/Index/index')}">首页</a> &gt; <a href="{:U('Home/News/news')}">装修课堂</a>
+ &gt; <strong>{$name}</strong>        
+    </h3>
+
+    <div class="clearfix"></div>
+</div>
+
+<div class="cases_details_ads"><a ><img src="__HOME__/picture/cases_details_ads.jpg" alt="" /></a></div>
+
+<div class="container cases_details">
+    <div class="cases_details_left">
+
+        <div class="decorate_top">
+<h2>{$name}</h2>        </div>
+ <input type="hidden" class="abc" aaa="{$id}">
+
+        <div class="decorate_list">
+       
+    </div>
+    <script type="text/javascript">
+        var abc=$('.abc').attr('aaa');
+        console.log(abc);
+        $.ajax({
+            type:'get',
+            url:"{:U('Home/news/ajax_more')}",
+            data:'id='+abc,
+            dataType:'html',
+            success:function(z){
+                console.log(z);
+                $('.decorate_list').html(z);
+            }
+        })
+    $(document).on('click','.pags li a',function(){
+        var url=$(this).attr('href');
+        console.log(url);
+        $.ajax({
+            type:'get',
+            url:url,
+            data:'',
+            dataType:'html',
+            success:function(z){
+                console.log(z);
+                $('.decorate_list').html(z);
+            }
+        })
+        return false;
+    })
+</script>
+ 
+
+<div class="cases_huodong_ads"><a  target="_blank"><img src="__HOME__/picture/pc_banner.jpg" alt="苹果装饰 苹果基装王" /></a></div>        <div id="fixed-view" data-rel="#cases_baojia"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
+
+<include file="Common/footer"/>

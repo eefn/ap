@@ -1,0 +1,115 @@
+<!--页底-->
+
+<div class="footer">
+    <div class="footer_menu">
+        <dl id="f_first">
+            <dt>
+                <a href="{:U('Home/Anli/anli')}">一站式家装服务高品质家装品牌</a>
+            </dt>
+            <dd>
+                <a href="{:U('Home/Anli/anli')}" rel="nofollow"><span class="org">6</span>大国家专利成就工程标杆</a>
+                <a href="{:U('Home/Anli/anli')}" rel="nofollow"><span class="org">15</span>年来专注家装服务质量提升</a>
+                
+                <a href="{:U('Home/Anli/anli')}" rel="nofollow"><span class="org">500000</span>客户已安心住进新家</a>
+		<a href="{:U('Home/Anli/anli')}" rel="nofollow"><span class="org">2000</span>名资深设计大咖专属服务</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                苹果装饰
+            </dt>
+            <dd>
+                <a href="{:U('Home/About/page')}">关于我们</a>
+                <a href="{:U('Home/About/page/id/3')}">品牌历程</a>
+                <a href="{:U('Home/About/page/id/4')}">加入我们</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                免费服务
+            </dt>
+            <dd>
+                <a href="{:U('Home/Designer/designer')}">免费验房</a>
+                <a href="{:U('Home/Designer/designer')}">免费量房</a>
+                <a href="{:U('Home/Designer/designer')}">免费报价</a>
+                <a href="{:U('Home/Designer/designer')}">免费参观专利工地</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <a  rel="nofollow">装修知识</a>
+            </dt>
+            <dd>
+                <a href="{:U('Home/News/news')}">装修知识</a>
+                <a href="{:U('Home/News/news_more/id/8')}">装修设计</a>
+                <a href="{:U('Home/News/news_more/id/10')}">装修风水</a>
+                <a href="{:U('Home/News/news_more/id/9')}">装修日记</a>
+            </dd>
+        </dl>
+        <dl class="last_box">
+            <dt>
+                咨询热线
+            </dt>
+            <p class="org">666-666-666</p>
+            <p class="two">周一至周日&nbsp;&nbsp;9:00-21:00</p>
+            <a href="#">
+
+                <div class="button">在线咨询</div>
+            </a>
+        </dl>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+
+            
+        <div class="float_bottom_close"><i></i><img src="__HOME__/picture/bottom_close.png"></div>
+        <script>
+            $(document).ready(function () {
+
+
+                
+
+                $('.float_bottom').on('click', function () {
+                    $('.float_bottom').removeClass('in');
+                    $('.float_bottom_close').css('display', 'block');
+                });
+
+                $('.float_bottom_close').on('click', 'img', function () {
+                    $('.float_bottom').addClass('in');
+                    $('.float_bottom_close').css('display', 'none');
+                });
+
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() >= 200) {
+                        if ($(".float_bottom").is('.on')) {
+                            $(".float_bottom").removeClass('on');
+                            $(".float_bottom_close").css('display', 'block');
+                        }
+
+                    } else {
+                        if ($(".float_bottom").is('.in')) {
+
+                        }
+                        else {
+                            $(".float_bottom").addClass('on').removeClass('in');
+                            $(".float_bottom_close").css('display', 'none');
+                        }
+                    };
+
+
+                });
+
+            });
+        </script>
+        <!--底部浮动-->
+<script language="javascript" src="__HOME__/js/lsjs.js"></script>
+   
+
+
+    <div style="display:none">
+        <script src="__HOME__/js/z_stat.js" language="JavaScript"></script>
+    </div>
+</body>
+</html>

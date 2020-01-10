@@ -1,0 +1,59 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/decorate.css" rel="stylesheet"/>
+<style>
+    .zx{
+        margin-bottom: 50px;
+    }
+</style>
+<div class="bg">
+    <div class="container">
+        <div class="zx of">
+            <div class="left fl">
+            <foreach name="news" key="k" item="value">
+                <neq name="k" value="$name">
+                <div class="zxsj of">
+                    <foreach name="news_cat" item="val">
+                    <eq name="k" value="$val['name']">
+                        <p class="title"><span>{$k}</span><a href="{:U('Home/news/news_more/id/'.$val['id'])}">查看更多</a></p>
+                    </eq>
+                     </foreach>
+                    
+                    <div class="fl sj">
+<a href="{:U('Home/news/news_art/id/'.$value['0']['id'])}"><img src="__PUBLIC__/{$value['0'].image}" alt="{$value['0'].title}" class="lt" /><p>{$value['0'].title}</p></a>
+
+                    </div>
+                    <div class="fl">
+                        <foreach name="value" item="v">
+                        <dd><a href="{:U('Home/News/news_art/id/'.$v['id'])}" >{$v.title}</a></dd>
+                        </foreach>
+                    </div>
+                </div>
+            
+                <else/>
+                </div>
+               <div class="right fl">
+                    <foreach name="news_cat" item="val">
+                    <eq name="k" value="$val['name']">
+                        <p class="title"><span>{$k}</span><a href="{:U('Home/news/news_more/id/'.$val['id'])}">查看更多</a></p>
+                    </eq>
+                     </foreach>
+                    <foreach name="value" item="v">
+                    <div class="rj"><a href="{:U('Home/News/news_art/id/'.$v['id'])}" ><img src="__PUBLIC__/{$v.image}" alt="房子怎么装修才合适？" class="lt" /><div><h6>{$v.title}</h6><p>{$v.content|html_entity_decode|substr=0,130}</p></div></a></div>
+                    </foreach>
+                    <div class="banner">
+<a href="#" ><img src="__HOME__/picture/pc_banner.jpg" alt="苹果装饰 苹果基装王" /></div>
+                    
+                </div>
+                </neq>
+                
+                </foreach>
+               
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<include file="Common/footer"/>

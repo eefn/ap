@@ -1,0 +1,126 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <title>AP精品大作</title>
+    <meta name="keywords" content="长沙装修公司排名,榜，装饰公司，全包装修报价,小户型装修,装修报价表，长沙装修公司，装修公司，苹果装饰，长沙苹果装饰,十大装修公司" />
+    <meta name="description" content="湖南苹果装饰专业从事家居装饰设计，家庭装修设计，装饰装修工程施工，室内设计服务。服务电话：400-0731-889" />
+    <link href="__HOME__/css/public.css" rel="stylesheet"/>
+
+
+<script src="__HOME__/js/jquery.js"></script>
+<script src="__HOME__/js/public.js"></script>
+<script src="__HOME__/js/uaredirect.js"></script>
+
+    <script type="text/javascript">uaredirect("/Mobile");</script>
+
+    <script language="javascript" type="text/javascript">var def = 1;</script>
+    
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="__HOME__/js/selectivizr.js"></script>
+      <noscript><link rel="stylesheet" href="__HOME__/css/75deba04cb8c4e53ad136a736768ecf9.css" /></noscript>
+    <![endif]-->
+
+    <script type="text/javascript" src="__HOME__/js/jquery.lazyload.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      jQuery(function() {
+          jQuery(".lazy").lazyload({
+              placeholder: "/Content/web/images/lazy.png",
+              effect: "fadeIn"
+           });
+      });
+    </script>
+    
+</head>
+<body>
+
+    
+
+ <!--页面头部-->
+
+<div class="header">
+    <!-- <div class="header_top">
+        <div class="container">
+            <div class="header_city">您的当前位置 <strong>长沙</strong></div>
+            <div class="header_tel"><i></i>24小时热线 : 400-0731-889</div>
+            <div class="clearfix"></div>
+        </div>
+    </div> -->
+    <div class="header_logo_menu">
+        <div class="container">
+            <div class="logo"><a href="{:U('Home/Index/index')}"><img src="__HOME__/picture/logo.png" alt="苹果装饰全国官网,长沙装修,装饰设计,别墅装修,苹果装饰装修公司" /><img src="__HOME__/picture/logob.png" /></a></div>
+            <div class="header_menu">
+                <dl>
+                    <foreach name="nav_list" key="key" item="value">
+                        <dd <eq name="key" value="0">id="h_first"</eq>>
+                            <a href="{:U($value['url'])}">{$value.name}</a>
+                            <neq name="value['son']" value="">
+                                <div class="sub_menu">
+                                    <foreach name="value['son']" item="v">
+                                        <p><a href="{:U($v['url'].'/id/'.$v['id'])}">{$v.name}</a></p>
+                                    </foreach>
+                                </div>
+                            </neq>
+                            <eq name="value['name']" value="设计团队">
+                                <div class="sub_menu">
+                                    <foreach name="value['son']" item="v">
+                                        <foreach name="designer_lv" item="val">
+                                            <eq name="val['name']" value="$v['name']">
+                                                <p><a href="{:U('Home/Designer/designer/id/'.$val['id'])}">{$v.name}</a></p>
+                                            </eq>
+                                        </foreach>
+                                    </foreach>
+                                </div>
+                            </eq>
+                             <neq name="value['cat']" value="">
+                                <div class="sub_menu">
+                                    <foreach name="value['cat']" item="v">
+                                        <p><a href="{:U('Home/News/news_more/id/'.$v['id'])}">{$v.name}</a></p>
+                                    </foreach>
+                                </div>
+                            </neq>
+                            <neq name="value['about']" value="">
+                                <div class="sub_menu">
+                                    <foreach name="value['about']" item="v">
+                                        <p><a href="{:U('Home/About/page/id/'.$v['id'])}">{$v.name}</a></p>
+                                    </foreach>
+                                </div>
+                            </neq>
+                        </dd>
+                    </foreach>
+                </dl>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+    </div>
+
+
+</div>
+<script language="javascript" type="text/javascript">
+
+
+
+
+$(function () {
+    $(window).on('scroll', function () {
+        var $scroll = $(this).scrollTop();
+        if ($scroll >= 200) {
+            $(".header_logo_menu").addClass("header_logo_menu_hover");
+            //$(".header_logo_menu .logo").find("img").attr("src", "/Content/web/images/logo_b.png");
+            $(".header_logo_menu .logo").find("a").html('<img src="__HOME__/picture/logo_b.png" alt="苹果装饰全国官网,长沙装修,装饰设计,别墅装修,苹果装饰装修公司" />');
+            //$("body").css("background-position", "center 650px");
+
+        } else {
+            $(".header_logo_menu").removeClass("header_logo_menu_hover");
+            //$(".header_logo_menu .logo").find("img").attr("src", "/Content/web/images/logo.png");
+            $(".header_logo_menu .logo").find("a").html('<img src="__HOME__/picture/logo.png" alt="苹果装饰全国官网,长沙装修,装饰设计,别墅装修,苹果装饰装修公司" /><img src="__HOME__/picture/logob.png" />');
+            //$("body").css("background-position", "center 720px");
+
+        }
+    });
+
+});
+</script>

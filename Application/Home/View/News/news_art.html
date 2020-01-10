@@ -1,0 +1,121 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/insidepublic_1.css" rel="stylesheet"/>
+
+<div class="container top">
+    <h3><a href="{:U('Home/Index/index')}">首页</a>
+ &gt; <a href="{:U('Home/News/news')}">装修课堂</a>  &gt;  <a href="{:U('Home/News/news_more/id/'.$news_cat['id'])}">{$news_cat.name}</a>     &gt; <strong>{$news.title}</strong></h3>
+  
+    <div class="clearfix"></div>
+</div>
+
+<div class="cases_details_ads"><a href="#"><img src="__HOME__/picture/cases_details_ads.jpg" alt="" /></a></div>
+
+<div class="container cases_details">
+    <div class="cases_details_left">    
+        <div class="cases_details_title">{$news.title}</div>
+        <div class="cases_details_title_detaileds">     
+            <span><i>{$news.click}</i>人气</span>
+        </div>
+        <div class="cases_details_show"><p class="MsoNormal" align="center" style="text-align:center;">
+	<br />
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+{$news.content|html_entity_decode}
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<br />
+</p></div>
+
+
+    </div>
+        <div class="cases_details_right" style="position: relative">
+        <p id="placeholder" style="position:absolute;left:0;top:-16px;"></p>
+        <div class="cases_baojia">
+            <h3><img src="__HOME__/picture/cases_baojia.jpg" alt="" /></h3>
+            <form id="cases_baojia">
+                <input type="hidden" name="house_id" value="{$house.id}">
+                <select name="level" class="level">
+                    <option value="">装修档次</option>
+                    <option value="豪华装修">豪华装修</option>
+                    <option value="精品装修">精品装修</option>
+                    <option value="简单装修">简单装修</option>
+                </select>
+                <input name="area" class="areas" placeholder="建筑面积" value="" maxlength="20" type="number" />
+                <input name="guestbook_name" class="realname" placeholder="输入您的称呼" value="" maxlength="20" type="text" />                
+                <input name="phone" class="telephone" placeholder="输入号码，报价结果将发送到手机" value="" maxlength="11" type="text" />
+                <button type="button" id="button">快速报价</button>
+            </form>
+            <p>我们承诺：绝不产生任何费用，为了您的利益以及我们的口碑，您的隐私将被严格保密。</p>
+        </div>
+        
+        <div class="decorate_tag_list">
+
+            <div class="lable">
+                <h2>装修前-准备阶段</h2>
+                <div class="lable-1">
+                    <a href="#"><i class="hover1"></i>房产</a>
+                    <a href="#"><i class="hover2"></i>收房</a>
+                    <a href="#"><i class="hover3"></i>设计</a>
+                    <a href="#"><i class="hover4"></i>预算</a>
+                    <a href="#"><i class="hover5"></i>合同</a>
+                </div>
+            </div>
+            <div class="lable">
+                <h2>装修中-施工阶段</h2>
+                <div class="lable-2">
+                    <a href="#"><i class="hover6"></i>材料</a>
+                    <a href="#"><i class="hover7"></i>拆改</a>
+                    <a href="#"><i class="hover8"></i>水电</a>
+                    <a href="#"><i class="hover9"></i>防水</a>
+                    <a href="#"><i class="hover10"></i>泥瓦</a>
+                    <a href="#"><i class="hover11"></i>木工</a>
+                    <a href="#"><i class="hover12"></i>油漆</a>
+                    <a href="#"><i class="hover13"></i>安装收尾</a>
+                </div>
+            </div>
+            <div class="lable">
+                <h2>装修后-入住阶段</h2>
+                <div class="lable-3">
+                    <a href="#"><i class="hover14"></i>软装</a>
+                    <a href="#"><i class="hover15"></i>入住</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="clearfix"></div>
+</div>
+<include file="Common/footer"/>
+<script>
+    //Ajax留言
+    $('#cases_baojia #button').click(function(){
+        var guestbook_name=$('#cases_baojia .realname').val();
+        var phone=$('#cases_baojia .telephone').val();
+        var level=$('#cases_baojia .level').val();
+        var area=$('#cases_baojia .areas').val();
+        $.ajax({
+            type:'post',
+            url:"{:U('Home/Anli/guestbook')}",
+            data:'guestbook_name='+guestbook_name+'&phone='+phone+'&level='+level+'&area='+area,
+            dataType:"text",
+            success:function(z){
+                if(z==1){
+                    alert('报价成功');
+                    $('#placeholder').html('报价成功!!');
+                    $('#placeholder').fadeIn(100);
+                    $('#placeholder').fadeOut(5000);
+                    $('#cases_baojia .areas').val('');
+                }else{
+                    alert(z);
+                }
+            }
+        })
+        return false;
+    })
+</script>

@@ -1,0 +1,134 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/insidepublic.css" rel="stylesheet"/>  
+
+
+<div class="vr_banner">
+    <div class="container">
+        <div class="vr_liucheng">
+            <h3>服务流程<i>Service Process</i></h3>
+            <dl><dd><i style="background: url('__HOME__/images/liucheng_list_dd.png') no-repeat 0 center;"></i><p>在线预约</p></dd><dd><i></i><p>验房量房</p></dd><dd><i></i><p>设计报价</p></dd><dd><i></i><p>精算签约</p></dd><dd><i></i><p>工地施工</p></dd><dd><i></i><p>验收结算</p></dd><dd><i></i><p>售后服务</p></dd></dl>
+        </div>
+        <div class="vr_box">
+            <div class="top top_line">
+                <h3>
+                    <a href="/">首页</a>
+ &gt; <strong>设计团队</strong>                </h3>
+                <span>D E S I G N _ T E A M 个性化设计 为您出谋划策</span>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="cases_chacked">
+                <dl>
+                    <dt>设计级别</dt>
+                    <dd id="lv_cat">
+                        <eq name="get_id" value=''>
+                            <a href="#"  class="hover" lv_id="0">不限</a>
+                            <foreach name="designer_lv" item="v">
+                                <a href="#" lv_id="{$v.id}">{$v.name}</a>
+                            </foreach>
+                        <else/>
+                            <a href="#" lv_id="0">不限</a>
+                            <foreach name="designer_lv" item="v">
+                                <a href="#" lv_id="{$v.id}" <eq name="v['id']" value="$get_id">class="hover"</eq>>{$v.name}</a>
+                            </foreach>
+                        </eq>
+                        
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>擅长风格</dt>
+                    <dd id="style_cat">
+                        <a href="#"  class="hover" style_id="0">不限</a>
+                        <foreach name="designer_style" item="v">
+                            <a href="#" style_id="{$v.id}">{$v.style_name}</a>
+                        </foreach>
+                    </dd>
+                </dl>
+         
+                <div class="cases_search">
+                        <input name="Search_Keyword" id="search" placeholder="设计师姓名" value="" /><button type="submit" id="sousuo">搜索</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container designers_list">
+
+
+
+</div>
+    
+    
+<include file="Common/footer"/>
+<script>
+    $('.cases_chacked dl dd a').click(function(){
+        $(this).addClass('hover').siblings('a').removeClass('hover');
+        return false;
+    })
+</script>
+<script>
+        
+        $.ajax({
+            type:'get',
+            url:"{:U('Home/Designer/ajaxdesigner')}",
+            data:'style_id='+$('#style_cat').find('.hover').attr('style_id')+'&lv_id='+$('#lv_cat').find('.hover').attr('lv_id'),
+            dataType:'html',
+            success:function(z){
+                $('.designers_list').html(z);
+            }
+        })
+
+        $('.cases_chacked dl dd a').click(function(){
+            var style=$('#style_cat').find('.hover').attr('style_id');
+            var lv=$('#lv_cat').find('.hover').attr('lv_id');
+            //console.log(style);
+            //alert(lv);
+            $.ajax({
+                type:'get',
+                url:"{:U('Home/Designer/ajaxdesigner')}",
+                data:'style_id='+style+'&lv_id='+lv,
+                dataType:'html',
+                success:function(z){
+                    //console.log(z);
+                    $('.designers_list').html(z);
+                }
+            })
+            return false;
+        })
+
+        $(document).on('click','.designers_list .pags ul li a',function(){
+            var url=$(this).attr('href');
+            $.ajax({
+            type:'get',
+            url:url,
+            data:'',
+            dataType:'html',
+            success:function(z){
+              $('.designers_list').html(z);
+            }
+          })
+            return false;
+        })
+
+        $('#search').keypress(function(e){
+            if(e.keyCode==13){
+              $('#sousuo').trigger('click');
+            }
+        })
+
+        $('#sousuo').click(function(){
+            var value=$('#search').val();
+            var style=$('#style_cat').find('.hover').attr('style_id');
+            var lv=$('#lv_cat').find('.hover').attr('lv_id');
+              $.ajax({
+              type:'get',
+              url:"{:U('Home/Designer/ajaxdesigner')}",
+              data:'style_id='+style+'&lv_id='+lv+'&search='+value,
+              dataType:'html',
+              success:function(z){
+                $('.designers_list').html(z);
+              }
+            })
+        })
+    </script>

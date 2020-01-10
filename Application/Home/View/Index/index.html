@@ -1,0 +1,361 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/index.css" rel="stylesheet"/>
+<!--滑动轮播图 -->
+<style type="text/css">
+    /* 本例子css */
+        .slideBox{ width:100%; height:560px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+        .slideBox .hd{ height:15px; overflow:hidden; position:absolute;width: 100%;left:0; bottom:5px; z-index:2; }
+        .slideBox .hd ul{ overflow:hidden;margin:0 auto; zoom:1; display: flex;width: 84px;justify-content:space-between;}
+        .slideBox .hd ul li{ float:left;  width:15px; height:15px; border-radius: 50%; line-height:14px; text-align:center; background:rgba(255,255,255,.3); cursor:pointer; }
+        .slideBox .hd ul li.on{ background:#fff; color:#fff; }
+        .slideBox .bd{ position:relative; height:100%; z-index:0;   }
+        .slideBox .bd li{ zoom:1; vertical-align:middle; }
+        .slideBox .bd img{ width:1900px; height:560px; display:block;  }
+
+        /* 下面是前/后按钮代码，如果不需要删除即可 */
+        .slideBox .prev,
+        .slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(__HOME__/images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+        .slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+        .slideBox .prev:hover,
+        .slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+        .slideBox .prevStop{ display:none;  }
+        .slideBox .nextStop{ display:none;  }
+</style>
+<div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul><li></li><li></li><li></li><li></li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <foreach name="banner" item="v">
+                        <li><a href="{:U('Home/Anli/anli')}" ><img src="__PUBLIC__/{$v.image}" /></a></li>
+                    </foreach>
+                </ul>
+            </div>
+
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+
+        </div>
+
+    <!--轮播-->
+    <script src="__HOME__/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script>
+            jQuery(".slideBox").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,delayTime:1000});
+        </script>
+
+
+
+<!--案例部分 -->
+
+<div class="cases">
+    <div class="container">
+        <div class="top">
+            <h3>精品案例</h3><label>装修案例 眼见为实，触动你的灵感</label>
+			<span class="cases_top">
+				<a href="{:U('Home/Anli/anli')}">查看更多&nbsp;+</a>
+			</span>
+			<div class="clearfix"></div>
+        </div>
+        <div class="cases_list">
+            <div class="cases_da">
+<a href="{:U('Home/Anli/anli_art/id/'.$house_lg['id'])}" rel="nofollow"><img src="__PUBLIC__/{$house_lg.image}" class="lazy" alt="{$house_lg.house_name}" style="width:594px;height:442px;" /><div><h3>{$house_lg.house_name}</h3><p>设计没有标准，用综合美学来诠释属于项目定位和客人喜好的住宅环境，用雅奢理念赋予对设计的一种追求和生活。在住宅项目上，兼顾实用的同时，赋予适合主人的审美</p><span>在线咨询</span></div></a>
+            </div>
+            <dl class="cases_xiao">
+            <foreach name="house_lt" item="v">
+                <dd><a href="{:U('Home/Anli/anli_art/id/'.$v['id'])}" ><img src="__PUBLIC__/Thumb/{$v.image}" class="lazy" alt="{$v.house_name}" /><h4>{$v.house_name}</h4></a></dd>
+            </foreach>
+
+            </dl>
+            <div class="clearfix"></div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+<!--服务流程-->
+<div class="container serviceprocess">
+    <div class="top">
+        <h3>服务流程</h3><label>官网预约 先享服务后定装</label>
+        <div class="clearfix"></div>
+    </div>
+    <div class="decoration-reference">
+        <div class="flow-container">
+            <!--在线预约-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="animation-box">
+                            <em class="deco-life-sofa flow-ui"></em>
+                        </div>
+                    </div>
+                    <p>在线预约</p>
+                </a>
+            </div>
+            <div class="flow-line">
+                <div class="border-horizontal"></div>
+            </div>
+            <!--验房量房-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-horizontal border-top"></div>
+                        <div class="border-horizontal border-bottom"></div>
+                        <div class="border-left">
+                            <div class="part-top">
+                                <div class="border-vertical move-to-top"></div>
+                            </div>
+                            <div class="part-bottom">
+                                <div class="border-vertical move-to-bottom"></div>
+                            </div>
+                        </div>
+                        <div class="border-right">
+                            <div class="part-top">
+                                <div class="border-vertical move-to-bottom"></div>
+                            </div>
+                            <div class="part-bottom">
+                                <div class="border-vertical move-to-top"></div>
+                            </div>
+                        </div>
+                        <div class="animation-box">
+                            <em class="deco-before-ruler1 flow-ui"></em>
+                            <em class="deco-before-ruler2 flow-ui"></em>
+                        </div>
+                    </div>
+                    <p>验房量房</p>
+                </a>
+            </div>
+            <div class="flow-line"></div>
+            <!--设计方案-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="animation-box">
+                            <em class="deco-design-ruler flow-ui"></em>
+                            <em class="deco-design-pen flow-ui"></em>
+                        </div>
+                    </div>
+                    <p>设计方案</p>
+                </a>
+            </div>
+            <div class="flow-line"></div>
+            <!--预算报价-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" class="fixed_bj" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="animation-box">
+                            <em class="deco-search flow-ui"></em>
+                        </div>
+                    </div>
+                    <p>预算报价</p>
+                </a>
+            </div>
+            <div class="flow-line"></div>
+            <!--签订合同-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="animation-box">
+                            <em class="deco-purchase-basket flow-ui"></em>
+                        </div>
+                    </div>
+                    <p>签订合同</p>
+                </a>
+            </div>
+            <div class="flow-line"></div>
+            <!--施工阶段-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="animation-box">
+                            <em class="deco-working flow-ui"></em>
+                            <span class="wall flow-ui-plus"><em></em></span>
+                        </div>
+                    </div>
+                    <p>施工阶段</p>
+                </a>
+            </div>
+            <div class="flow-line"></div>
+            <!--验收结算-->
+            <div class="flow-item">
+                <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                    <div class="flow-icon">
+                        <div class="border-top"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                        <div class="border-right"></div>
+                        <div class="animation-box">
+                            <em class="deco-check-paper flow-ui"></em>
+                            <em class="deco-check-symbol flow-ui"></em>
+                        </div>
+                    </div>
+                    <p>验收结算</p>
+                </a>
+            </div>
+            <div class="flow-line"></div>
+            <!--售后服务-->
+                
+                <div class="flow-item">
+                    <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                        <div class="flow-icon">
+                            <div class="border-top"></div>
+                            <div class="border-bottom"></div>
+                            <div class="border-left"></div>
+                            <div class="border-right"></div>
+                            <div class="animation-box">
+                                <em class="deco-prepare-wrench flow-ui"></em>
+                                <em class="deco-prepare-hammer flow-ui"></em>
+                            </div>
+                        </div>
+                        <p>售后服务</p>
+                    </a>
+                </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--设计团队-->
+<div class="container designer">
+    <div class="top">
+        <h3>设计团队</h3>
+        <label>设计精英倾心服务 帮您实现理想家</label>
+        <span>
+            <a href="{:U('Home/Designer/designer')}">查看全部设计师&nbsp;+</a>
+        </span>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <div class="designer_left">
+        <dl>
+            <foreach name="designer" item="v">
+                <dd><a href="{:U('Home/Designer/designer_art/id/'.$v['id'])}" ><img src="__PUBLIC__/{$v.image}" class="lazy" alt="{$v.designer_name}" /><h4 class="ds_names">{$v.designer_name}</h4></a></dd>
+            </foreach>
+
+        </dl>
+        <div class="clearfix"></div>
+        <div class="designer_left_yy">
+            <a href="{:U('Home/Designer/designer')}" rel="nofollow">
+                <img src="__HOME__/picture/ds_reserve.png" alt="预约设计师" />
+            </a>
+        </div>
+    </div>
+    <div class="designer_right">
+
+<div class="designer_headlines">
+<a href="{:U('Home/Designer/designer_art/id/'.$designer_king['id'])}" rel="nofollow"><img src="__PUBLIC__/{$designer_king.image}" class="lazy" alt="{$designer_king.designer_name}" /><i></i>
+<div>
+<h3>{$designer_king.designer_name}</h3><p>设计职位：{$designer_king.l_name}</p><p>入行时间：{$designer_king.jointime|date='Y',###}</p><p>擅长风格：{$designer_king.description|html_entity_decode}</p><span>预约设计师</span></div>
+</a></div>
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><a href="{:U('Home/Anli/anli_art/id/'.$designer_king['h_id'])}" ><img src="__PUBLIC__/{$designer_king['h_image']}" class="lazy" alt="{$designer_king['h_name']}" /><div class="silder_text"><h5>{$designer_king['h_name']}</h5><p>&nbsp; &nbsp; &nbsp; {$designer_king.h_description}</p></div></a></div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+<div class="clearfix"></div>
+<div class="designer_left_yy"><a href="{:U('Home/Designer/designer')}"><img src="__HOME__/picture/ds_reserve_2.png" alt="专属设计师" /><span><i>→</i></span></a></div>
+
+ 
+    </div>
+
+    <div class="clearfix"></div>
+        
+    
+</div>
+
+<!--装修课堂-->
+
+<div class="decorate">
+    <div class="container decorate">
+        <div class="top"><h3>装修课堂</h3><label>完整装修流程与攻略</label><span><a href="{:U('Home/News/news')}">查看更多&nbsp;+</a></span><div class="clearfix"></div></div>
+        
+
+        <div class="decorate_dsj">
+            <div class="decorate_left">
+                <i></i>
+                <h2>装修大事件</h2>
+                <div class="border"></div>
+                <p>简单、适用、新趣味</p>
+            </div>
+            <div class="decorate_right">
+               <div class="decorate_sj">
+                   <div class="decorate_top"><h3>{$cat_sj.name}</h3>
+						<span><a href="{:U('Home/news/news_more/id/'.$cat_sj['id'])}">查看更多</a></span>
+						<div class="clearfix"></div></div>
+                    <dl>
+                        <foreach name="news_sj" item="v">
+                            <dd><a href="{:U('Home/News/news_art/id/'.$v['id'])}" >{$v.title}</a></dd>
+                        </foreach>
+                    </dl>
+               </div>
+               <div class="decorate_fs">
+                   <div class="decorate_top"><h3>{$cat_fs.name}</h3>
+						<span><a href="{:U('Home/news/news_more/id/'.$cat_fs['id'])}">查看更多</a></span>
+						<div class="clearfix"></div></div>
+                    <dl>
+                        <foreach name="news_fs" item="v">
+                            <dd><a href="{:U('Home/News/news_art/id/'.$v['id'])}" >{$v.title}</a></dd>
+                        </foreach>
+                    </dl>
+               </div>
+                <div class="decorate_rj">
+                    <div class="decorate_top"><h3>{$cat_fs.name}</h3>
+						<span><a href="{:U('Home/news/news_more/id/'.$cat_rj['id'])}">查看更多</a></span>
+						<div class="clearfix"></div></div>
+                    <dl>
+                        <foreach name="news_rj" item="v">
+                            <dd><a href="{:U('Home/News/news_art/id/'.$v['id'])}" >{$v.title|substr=###,'0','30'}...</a></dd>
+                        </foreach>
+                    </dl>
+                </div>
+decorate_rj decorate_fs
+            </div>
+</div>
+            <div class="clearfix"></div>
+        </div>
+</div>
+
+
+<!--装修服务-->
+<div class="container corp_service">
+    <foreach name="service" item="v">
+        <dl>
+            <dt>
+                <img src="__PUBLIC__/{$v.image}">
+            </dt>
+            <dd>
+                <h3>{$v.max_title}</h3>
+                <h4>{$v.min_title}</h4>
+            </dd>
+        </dl>
+    </foreach>
+</div>
+<div class="clearfix"></div>
+<!--页底-->
+<include file="Common/footer"/>

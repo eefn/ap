@@ -1,0 +1,131 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/insidepublic.css" rel="stylesheet"/>  
+<div class="cases_banner">
+    <div class="container">
+        <div class="cases_box">
+            <div class="top top_line">
+                <h3><a href="{:U('Home/Index/index')}">首页</a> &gt; <strong>装修案例</strong>                </h3>
+                <span>眼见为实，触动你的灵感</span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cases_chacked">
+                <dl>
+                    <dt>风格</dt>
+                    <dd>
+                    <a href=""  class="hover" style_id="0">不限</a>
+                    <foreach name="style" item="value">
+                    <a href="javascript:void(0)" style_id="{$value['id']}">{$value.style_name}</a>
+                    </foreach>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>预算</dt>
+                    <dd>
+					<a href=""  class="hover" budget_id="0">不限</a>
+					<foreach name="budget" item="value">
+					<a href="javascript:void(0)" budget_id="{$value['id']}">{$value.budget_name}</a>
+					</foreach>
+                	</dd>
+                </dl>
+                <dl>
+                    <dt>户型</dt>
+                    <dd>
+					<a href=""  class="hover" type_id="0">不限</a>
+					<foreach name="type" item="value">
+					<a href="javascript:void(0)" type_id="{$value['id']}">{$value.type_name}</a>
+					</foreach>
+                	</dd>
+                </dl>
+                <div class="cases_search">
+                    <form action="" method="get">
+                        <input name="Search_Keyword" placeholder="案例搜索" value="" name="search" id="search"/>
+                        <button type="submit" id="button">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<dl class="cases_sort container">
+    <dt><a href="javascript:void(0)" hot_now="1">最热</a><a href="javascript:void(0)" hot_now="0">最新</a></dt>
+    <dd>已为您推荐<strong>158</strong>套案例</dd>
+</dl>
+<div class="cases_list"></div>
+<script>
+	//初始化
+	$.ajax({
+        type:'get',
+        url:"{:U('Home/Anli/ajaxAnli')}",
+        dataType:'html',
+        success:function(z){
+          $('.cases_list').html(z);
+        }
+      })
+	//ajax分页
+    $(document).on('click','.pags a',function(){
+        var url=$(this).attr('href');
+        $.ajax({
+          type:'get',
+          url:url,
+          dataType:'html',
+          success:function(z){
+            $('.cases_list').html(z);
+          }
+        })
+        return false;
+    })
+    //ajax搜索框
+    $(document).on('click','#button',function(){
+	  var value=$('#search').val();
+	  var style_id=$('.cases_chacked dl dd .hover').attr('style_id');
+	  var budget_id=$('.cases_chacked dl:nth-child(2) dd .hover').attr('budget_id');
+	  var type_id=$('.cases_chacked dl:nth-child(3) dd .hover').attr('type_id');
+	  $.ajax({
+	    type:'get',
+	    url:"{:U('Home/Anli/ajaxAnli')}",
+	    data:'search='+value+"&style_id="+style_id+"&budget_id="+budget_id+"&type_id="+type_id,
+	    dataType:'html',
+	    success:function(z){
+	      $('.cases_list').html(z);
+	    }
+	 })
+	  return false;
+	})
+	//buy,addtime的ajax查询
+	$(document).on('click','.cases_sort a',function(){
+	  var hot_now=$(this).attr('hot_now');
+	  var value=$('#search').val();
+	  var style_id=$('.cases_chacked dl dd .hover').attr('style_id');
+	  var budget_id=$('.cases_chacked dl:nth-child(2) dd .hover').attr('budget_id');
+	  var type_id=$('.cases_chacked dl:nth-child(3) dd .hover').attr('type_id');
+	  $.ajax({
+	    type:'get',
+	    url:"{:U('Home/Anli/ajaxAnli')}",
+	    data:"hot_now="+hot_now+"&search="+value+"&style_id="+style_id+"&budget_id="+budget_id+"&type_id="+type_id,
+	    dataType:'html',
+	    success:function(z){
+	      $('.cases_list').html(z);
+	    }
+	 })
+	  return false;
+	})
+	//ajax导航
+	$('.cases_chacked dl dd a').click(function(){
+		$(this).addClass('hover').siblings('a').removeClass('hover');
+		var style_id=$('.cases_chacked dl dd .hover').attr('style_id');
+		var budget_id=$('.cases_chacked dl:nth-child(2) dd .hover').attr('budget_id');
+		var type_id=$('.cases_chacked dl:nth-child(3) dd .hover').attr('type_id');
+		$.ajax({
+			type:'get',
+			url:"{:U('Home/Anli/ajaxAnli')}",
+			data:"style_id="+style_id+"&budget_id="+budget_id+"&type_id="+type_id,
+			dataType:'html',
+			success:function(z){
+				$('.cases_list').html(z);
+			}
+		})
+		return false;
+	})
+</script>
+
+    <include file="Common/footer"/>

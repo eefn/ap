@@ -1,0 +1,133 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/insidepublic.css" rel="stylesheet"/>  
+
+<div class="vr_banner">
+    <div class="container">
+        <div class="vr_liucheng">
+            <h3>服务流程<i>Service Process</i></h3>
+            <dl><dd><i></i><p>在线预约</p></dd><dd><i></i><p>验房量房</p></dd><dd><i></i><p>设计报价</p></dd><dd><i></i><p>精算签约</p></dd><dd><i></i><p>工地施工</p></dd><dd><i></i><p>验收结算</p></dd><dd><i></i><p>售后服务</p></dd></dl>
+        </div>
+        <div class="vr_box">
+            <div class="top">
+                <h3>
+                    <a href="{:U('Home/Index/index')}">首页</a>
+ &gt; <!-- <a href="{:U('Home/Designer/designer')}">设计团队</a> &gt;  --><a href="{:U('Home/Designer/designer')}">设计师</a>                    &gt; <strong>{$designer.designer_name}</strong>
+                </h3>
+                <span>D E S I G N _ T E A M 个性化设计 为您出谋划策</span>
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container designers_details">
+
+    <div class="designers_details_data">
+        <div class="data_pic">
+            <span><img src="__PUBLIC__/{$designer.image}" alt="" style="width: 280px;height: 280px;" /></span>
+            <ul>
+                <li><p>{$designer.click}</p>浏览</li>
+                <li class="line"><p>{$count}</p>案例</li>
+                <li><p>{$designer.price}</p>设计费/平米</li>
+            </ul>
+        </div>
+        <div class="data_detail">            
+            <h2>{$designer.name}<span>{$designer.l_name}</span></h2>
+            <p><b>入行时间：</b>{$designer.jointime|date='Y',###}年</p>
+            <p><b>擅长：</b>{$designer.description|html_entity_decode}</p>    
+            <div class="data_list">  
+                <p><b>爱好：</b>{$designer.hobby} </p>
+                <p><b>所属门店：</b>{$designer.store}</p>
+                <p><b>所属服务社：</b>{$designer.service_center}</p>
+                <p><b>毕业学校：</b>{$designer.school}</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="placeholder" style="position: absolute;top:296px;right: 616px;"></div>
+    <div class="cases_baojia">
+            <h3><img src="__HOME__/picture/cases_baojia.jpg" alt="" /></h3>
+            <form id="cases_baojia">
+                <input type="hidden" name="house_id" value="{$house.id}">
+                <select name="level" class="level">
+                    <option value="">装修档次</option>
+                    <option value="豪华装修">豪华装修</option>
+                    <option value="精品装修">精品装修</option>
+                    <option value="简单装修">简单装修</option>
+                </select>
+                <input name="area" class="areas" placeholder="建筑面积" value="" maxlength="20" type="number" />
+                <input name="guestbook_name" class="realname" placeholder="输入您的称呼" value="" maxlength="20" type="text" />                
+                <input name="phone" class="telephone" placeholder="输入号码，报价结果将发送到手机" value="" maxlength="11" type="text" />
+                <button type="button" id="button">快速报价</button>
+            </form>
+            <p>我们承诺：绝不产生任何费用，为了您的利益以及我们的口碑，您的隐私将被严格保密。</p>
+        </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="container designers_cases_top">
+    <img src="__HOME__/picture/designers_cases_top.jpg" alt="" />
+</div>
+
+<div class="cases_list">
+    
+</div>
+
+<include file="Common/footer"/>
+<script>
+    $.ajax({
+            type:'get',
+            url:"{:U('Home/Designer/ajaxdesigner_art')}",
+            data:'designer_id={$designer.id}',
+            dataType:'html',
+            success:function(z){
+                $('.cases_list').html(z);
+            }
+        })
+
+    $(document).on('click','.cases_list .pags ul li a',function(){
+            var url=$(this).attr('href');
+            $.ajax({
+            type:'get',
+            url:url,
+            data:'',
+            dataType:'html',
+            success:function(z){
+              $('.cases_list').html(z);
+            }
+          })
+            return false;
+        })
+</script>
+<script>
+    //Ajax留言
+    $('#cases_baojia #button').click(function(){
+        var guestbook_name=$('#cases_baojia .realname').val();
+        var phone=$('#cases_baojia .telephone').val();
+        var level=$('#cases_baojia .level').val();
+        var area=$('#cases_baojia .areas').val();
+        $.ajax({
+            type:'post',
+            url:"{:U('Home/Anli/guestbook')}",
+            data:'guestbook_name='+guestbook_name+'&phone='+phone+'&level='+level+'&area='+area,
+            dataType:"text",
+            success:function(z){
+                if(z==1){
+                    alert('报价成功');
+                    $('#placeholder').html('报价成功!!');
+                    $('#placeholder').fadeIn(100);
+                    $('#placeholder').fadeOut(5000);
+                    $('#cases_baojia .areas').val('');
+                }else{
+                    alert(z);
+                }
+            }
+        })
+        return false;
+    })
+</script>

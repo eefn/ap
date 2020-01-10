@@ -1,0 +1,5 @@
+<foreach name="news" item="value">
+<dl><a href="{:U('Home/news/news_art/id/'.$value['id'])}"><dt><img src="__PUBLIC__/{$value.image}" alt="{$value.title}" /></dt><dd><h4>{$value.title}</h4><p>{$value.content|html_entity_decode|substr=0,130}
+</p><span><i class="time">{$value.addtime|date="y-m-d",###}</i><i class="views">{$value.click}次</i></span></dd></a></dl>
+</foreach>
+{$show}

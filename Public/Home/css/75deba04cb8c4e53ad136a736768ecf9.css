@@ -1,0 +1,660 @@
+﻿<!Doctype html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <title>错误-</title>
+    <meta name="keywords" content="错误-" />
+    <meta name="description" content="错误-" />
+    <link href="/Content/web/css/public.css?v=3.584" rel="stylesheet"/>
+
+    <link href="/Content/web/css/tanchuangfudong.css?v=2.5678" rel="stylesheet"/>
+
+    <script src="/Content/web/js/jquery.js?v=1.8.2"></script>
+<script src="/Content/web/js/public.js?v=3.686"></script>
+<script src="/Content/web/js/uaredirect.js?v=1.0"></script>
+
+
+    
+    
+    <link href="/Content/web/css/error.css?v=1.0" rel="stylesheet"/>
+
+<script type="text/javascript">uaredirect("/Mobile/Error");</script>
+
+    <script language="javascript" type="text/javascript">var def = 1;</script>
+    
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="/Content/web/js/selectivizr.js"></script>
+      <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+    <![endif]-->
+
+    <script type="text/javascript" src="/Content/web/js/jquery.lazyload.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      jQuery(function() {
+          jQuery(".lazy").lazyload({
+              placeholder: "/Content/web/images/lazy.png",
+              effect: "fadeIn"
+           });
+      });
+    </script>
+    
+</head>
+<body>
+
+    
+
+ <!--页面头部-->
+
+
+<div class="header">
+    <div class="header_top">
+        <div class="container">
+            <div class="header_city">您的当前位置 <strong>长沙</strong></div>
+            <div class="header_tel"><i></i>24小时热线 : 400-0731-889</div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="header_logo_menu">
+        <div class="container">
+            <div class="logo"><a href="/"><img src="/Content/web/images/logo.png" alt="苹果装饰全国官网,长沙装修,装饰设计,别墅装修,苹果装饰装修公司" /><img src="/Content/web/images/logob.png" /></a></div>
+            <div class="header_menu">
+                <dl>
+                    <dd id="h_first"><a href="/" target="_blank" title="长沙装修">首页</a></dd>
+                    <dd>
+                        <a href="/Cases" target="_blank">装修案例</a>
+                        <div class="sub_menu">
+                            
+                            <p><a href="/Cases" target="_blank">精品案例</a></p>
+                        </div>
+                    </dd>
+                    <dd><a href="/VrModel" target="_blank">VR样板间</a></dd>
+                    <dd>
+                        <a href="/Designers" target="_blank">设计团队</a>
+                        <div class="sub_menu">
+                            <p><a href="/Designers?JobsName=%E9%A6%96%E5%B8%AD%E8%AE%BE%E8%AE%A1%E5%B8%88" target="_blank">首席设计师</a></p>
+                            <p><a href="/Designers?JobsName=%E9%AB%98%E7%BA%A7%E8%AE%BE%E8%AE%A1%E5%B8%88" target="_blank">高级设计师</a></p>
+                            <p><a href="/Designers?JobsName=%E8%AE%BE%E8%AE%A1%E5%B8%88" target="_blank">设计师</a></p>
+                        </div>
+                    </dd>
+                    <dd>
+                        <a href="/Ensure" target="_blank">品质工艺</a>
+                        <div class="sub_menu">
+                            <p><a href="/Ensure" target="_blank">品质主材</a></p>
+                            <p><a href="/Ensure/Technology" target="_blank">工程工艺</a></p>
+                        </div>
+                    </dd>
+                    <dd>
+                        <a href="/Decorate" target="_blank">装修知识</a>
+                        <div class="sub_menu">
+                            <p><a href="/Decorate/DecorateList?NewsClass_Id=4" target="_blank">装修流程</a></p>
+                            <p><a href="/Decorate/DecorateList?NewsClass_Id=5" target="_blank">装修设计</a></p>
+                            <p><a href="/Decorate/DecorateList?NewsClass_Id=6" target="_blank">装修日记</a></p>
+                            <p><a href="/Decorate/DecorateList?NewsClass_Id=7" target="_blank">装修材料</a></p>
+                            <p><a href="/Decorate/DecorateList?NewsClass_Id=8" target="_blank">旺宅布置</a></p>
+                            <p><a href="/Decorate/DecorateList?NewsClass_Id=9" target="_blank">常见问题</a></p>
+                        </div>
+                    </dd>
+                    <dd>
+                        <a href="/HuoDong" target="_blank" rel="nofollow">装修活动</a>
+                        <div class="sub_menu">
+                            <p><a href="/HuoDong" target="_blank">装修活动</a></p>
+                            <p><a href="/HuoDong/HuiYua" target="_blank">会员活动</a></p>
+                        </div>                       
+                    </dd>
+                    <dd>
+                        <a href="/About" target="_blank" rel="nofollow">苹果装饰</a>
+                        <div class="sub_menu">
+                            <p><a href="/About?NewsClass_Id=11" target="_blank" rel="nofollow">关于我们</a></p>
+                            <p><a href="/About?NewsClass_Id=12" target="_blank" rel="nofollow">品牌历程</a></p>
+                            <p><a href="/About/News" target="_blank" rel="nofollow">公司资讯</a></p>
+                            <p><a href="/About?NewsClass_Id=14" target="_blank" rel="nofollow">资质荣誉</a></p>
+                            <p><a href="/About?NewsClass_Id=15" target="_blank" rel="nofollow">加入我们</a></p>
+                            
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+
+
+
+
+
+$(function () {
+    $(window).on('scroll', function () {
+        var $scroll = $(this).scrollTop();
+        if ($scroll >= 200) {
+            $(".header_logo_menu").addClass("header_logo_menu_hover");
+            //$(".header_logo_menu .logo").find("img").attr("src", "/Content/web/images/logo_b.png");
+            $(".header_logo_menu .logo").find("a").html('<img src="/Content/web/images/logo_b.png" alt="苹果装饰全国官网,长沙装修,装饰设计,别墅装修,苹果装饰装修公司" />');
+            //$("body").css("background-position", "center 650px");
+
+        } else {
+            $(".header_logo_menu").removeClass("header_logo_menu_hover");
+            //$(".header_logo_menu .logo").find("img").attr("src", "/Content/web/images/logo.png");
+            $(".header_logo_menu .logo").find("a").html('<img src="/Content/web/images/logo.png" alt="苹果装饰全国官网,长沙装修,装饰设计,别墅装修,苹果装饰装修公司" /><img src="/Content/web/images/logob.png" />');
+            //$("body").css("background-position", "center 720px");
+
+        }
+    });
+
+});
+</script>
+
+    
+
+<div class="contents">
+    <div class="error">
+        <ul class="error_list">
+            <li></li>
+        </ul>
+            <div class="error_btn">
+                <a href="/">去首页</a>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!--页底-->
+
+<div class="footer">
+    <div class="footer_menu">
+        <dl id="f_first">
+            <dt>
+                <a href="javascript:void(0);">一站式家装服务高品质家装品牌</a>
+            </dt>
+            <dd>
+                <a href="javascript:void(0);" rel="nofollow"><span class="org">6</span>大国家专利成就工程标杆</a>
+                <a href="javascript:void(0);" rel="nofollow"><span class="org">15</span>年来专注家装服务质量提升</a>
+                
+                <a href="javascript:void(0);" rel="nofollow"><span class="org">500000</span>客户已安心住进新家</a>
+		<a href="javascript:void(0);" rel="nofollow"><span class="org">2000</span>名资深设计大咖专属服务</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                苹果装饰
+            </dt>
+            <dd>
+                <a href="/About?NewsClass_Id=11" target="_blank" rel="nofollow">关于我们</a>
+                <a href="/About?NewsClass_Id=12" target="_blank" rel="nofollow">品牌历程</a>
+                <a href="/About?NewsClass_Id=13" target="_blank" rel="nofollow">公司资讯</a>
+                <a href="/About?NewsClass_Id=14" target="_blank" rel="nofollow">资质荣誉</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                免费服务
+            </dt>
+            <dd>
+                <a href="/Free" target="_blank" rel="nofollow">免费验房</a>
+                <a href="/Free/LiangFang" target="_blank" rel="nofollow">免费量房</a>
+                <a href="/Free/BaoJia" target="_blank" rel="nofollow">免费报价</a>
+                <a href="/Free/CanGuan" target="_blank" rel="nofollow">免费参观专利工地</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="/Decorate" target="_blank" rel="nofollow">装修知识</a>
+            </dt>
+            <dd>
+                <a href="/Decorate/DecorateList?NewsClass_Id=5" target="_blank" rel="nofollow">装修设计</a>
+                <a href="/Decorate/DecorateList?NewsClass_Id=7" target="_blank" rel="nofollow">装修材料</a>
+                <a href="/Decorate/DecorateList?NewsClass_Id=8" target="_blank" rel="nofollow">旺宅布置</a>
+                <a href="/Decorate/DecorateList?NewsClass_Id=9" target="_blank" rel="nofollow">常见问题</a>
+            </dd>
+        </dl>
+        <dl class="last_box">
+            <dt>
+                咨询热线
+            </dt>
+            <p class="org">400-0731-889</p>
+            <p class="two">周一至周日&nbsp;&nbsp;9:00-21:00</p>
+            <a href="javascript:LR_HideInvite();openZoosUrl();" rel="nofollow">
+
+                <div class="button"><span></span>在线咨询</div>
+            </a>
+        </dl>
+        <div class="clearfix"></div>
+    </div>
+    <div class="footer_copy">
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010502000588" target="_blank" rel="nofollow"><img src="/Content/web/images/ga.png" alt="湘公网安备43010502000588号">湘公网安备43010502000588号</a> &nbsp;&nbsp;
+    <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">湘ICP备18001334号</a> &nbsp;&nbsp; &copy; 2003-2018 &nbsp;&nbsp; 湖南苹果装饰设计工程有限公司 ALL Rights Reserved</div>
+</div>
+
+
+
+    <!--免费报价-->
+    <div class="tanchu">
+        <div class="tanchu-close">&nbsp;×</div>
+        <form id="tanchu_form">
+            <div class="tanchu-flex hidden-get-price">
+                <div class="tanchu-left">
+                    <div class="tanchu-left-head">
+                        <h3>装修计算器 <span> 已有<strong class="customerdounts">0</strong>位业主获得报价</span></h3>
+                    </div>
+                    <div class="tanchu-left-form">
+                        
+                        <dl class="tanchu-left-formcon tanchu-left-form1">
+                            <dt>房屋面积：<strong>*</strong></dt>
+                            <dd><input name="Areas" type="text" placeholder="请输入房屋面积" /><span class="pf">㎡</span></dd>
+                        </dl>
+                        <dl class="tanchu-left-formcon tanchu-left-form2">
+                            <dt>房屋户型：<strong>*</strong></dt>
+                            <dd>
+                                <select name="shi">
+                                    <option value="1">一室</option>
+                                    <option value="2">二室</option>
+                                    <option value="3">三室</option>
+                                    <option value="4">四室</option>
+                                </select>
+                                <select name="ting">
+                                    <option value="1">一厅</option>
+                                    <option value="2">二厅</option>
+                                    <option value="3">三厅</option>
+                                    <option value="4">四厅</option>
+                                </select>
+
+                            </dd>
+                            
+                        </dl>
+                        <dl class="tanchu-left-formcon tanchu-left-form3">
+                            <dt></dt>
+                            <dd>
+                                <select name="chu">
+                                    <option value="1">一厨</option>
+                                    <option value="2">二厨</option>
+                                    <option value="3">三厨</option>
+                                    <option value="4">四厨</option>
+                                </select>
+                                <select name="wei">
+                                    <option value="1">一卫</option>
+                                    <option value="2">二卫</option>
+                                    <option value="3">三卫</option>
+                                    <option value="4">四卫</option>
+                                </select>
+                                <select name="yangtai">
+                                    <option value="1">一阳台</option>
+                                    <option value="2">二阳台</option>
+                                    <option value="3">三阳台</option>
+                                    <option value="4">四阳台</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="tanchu-left-formcon tanchu-left-form1">
+                            <dt>您的姓名：<strong>*</strong></dt>
+                            <dd><input name="RealName" type="text" maxlength="20" placeholder="请输入您的姓名" /></dd>
+                        </dl>
+                        <dl class="tanchu-left-formcon tanchu-left-form1">
+                            <dt>您的手机：<strong>*</strong></dt>
+                            <dd><input name="Telephone" type="text" maxlength="11" placeholder="请输入您的手机号码" /></dd>
+                        </dl>
+                    </div>
+                    <div class="tanchu-left-foot">
+                        *为了您 的权益，您的信息将被 严格保密
+                    </div>
+                </div>
+                <div class="tanchu-fg">
+                    <div class="tanchu-fgx"></div>
+                    <div class="tanchu-fg-but">
+                        <div class="tanchu-fg-butrotate"></div>
+                        <a href="javascript:;" onclick="dosubmit('#tanchu_form');" class="dosubmit"></a>
+                    </div>
+                </div>
+                <div class="tanchu-right">
+                    <h3 class="tanchu-right-head get_price">您家的装修预算<em>？</em>元</h3>
+                    <div class="tanchu-right-main">
+                        <div class="tanchu-right-miancon">
+                            <p class="cl">材料费：<em>？</em>元</p>
+                            <p class="rg">人工费：<em>？</em>元</p>
+                            <p class="sj">设计费：<em>？</em>元</p>
+                            <p class="zj">管理费：<em>？</em>元</p>
+                        </div>
+                    </div>
+                    <a onclick="LR_HideInvite();openZoosUrl();return false;" class="tanchu-right-sub">与家装顾问聊一聊</a>
+                </div>
+            </div>
+
+            <div class="tanchu-maincen show-get-price">
+                <div class="tanchu-maincen-jgleft">
+                    <p class="tanchu-maincen-jgleft-head" id="get_price">您的家装预算为<em>？</em>万元</p>
+                    <div class="tanchu-maincen-jgleft-main">
+                        <div>
+                            <p class="cailiao">价格区间：<em>？</em>元</p>
+                        </div>
+                    </div>
+                    <p class="tanchu-maincen-jgleft-dibz">*因材料品牌及工程量不同，具体报价以装修量房实测为准</p>
+                    <a onclick="LR_HideInvite();openZoosUrl();return false;" class="tanchu-maincen-zixun">在线咨询</a>
+                </div>
+                <div class="tanchu-maincen-jgright">
+                    <div class="tanchu-maincen-jgright-head"></div>
+                    <div class="tanchu-jgright-point">
+                        <p>贷款金额</p>
+                        <input class="tanchu-jgright-poinput totalprice" maxlength="7" type="text">
+                        <span class="yuan">元</span>
+                    </div>
+                    <div class="tanchu-jgright-point">
+                        <p>贷款期限(月)</p>
+                        <div class="tanchu-jgright-point-main bg1">
+                            <p>12</p>
+                            <p>24</p>
+                            <p>36</p>
+                        </div>
+                    </div>
+                    <div class="tanchu-jgright-poshow">
+                        <span class="s1">月供金额: </span>
+                        <span class="jg">0</span>
+                        <span class="s2">元</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+
+        function dosubmit(formObj) {
+
+
+            var Areas = $(formObj).find("input[name=Areas]").val();
+            var Telephone = $(formObj).find("input[name=Telephone]").val();
+            if (Areas < 10 || isNaN(Areas)) {
+                alert('请输入正确房屋面积');
+                return false;
+            }
+
+            if (Telephone <= 0 || Telephone == null || Telephone == "") {
+                alert("请填写您的电话");
+                return false;
+            }
+            else {
+                if (!/(^1[0-9]{10}|0[0-9]{2,3}[\-|\\]?[0-9]{7,8}$)/i.test(Telephone)) {
+                    alert("请填正确的电话");
+                    return false;
+                }
+
+            }
+
+            apply_ajax_no('#tanchu_form', "弹窗_免费报价");
+
+
+
+
+            if ($(formObj).find(".show-get-price").length > 0) {
+                $(formObj).find(".show-get-price").show();
+                $(formObj).find(".hidden-get-price").hide();
+            }
+
+            var price_num_s = Areas * 900;
+            var price_num_end = Areas * 1100;
+
+
+
+            if ($(formObj).find("#get_price").length > 0) {
+                $(formObj).find("#get_price").show();
+                $(formObj).find("#get_price>em").html((parseInt(price_num_s) / 10000).toFixed(2) + "-" + (parseInt(price_num_end) / 10000).toFixed(2));
+                if ($(formObj).find(".totalprice").length > 0) {
+                    //
+                    $(formObj).find(".totalprice").val(price_num_end);
+                    $(formObj).find(".totalprice").change();
+
+                }
+                $(formObj).find(".cailiao em").html(price_num_s + "-" + price_num_end);
+            }
+
+
+
+        };
+
+        function init_price() {
+            var Tprice = {
+                "price": 51000,
+                "cailiao": 30090,
+                "rengong": 13260,
+                "sheji": 3570,
+                "zhijian": 4080
+            };
+            $(".get_price em").html(Tprice.price);
+            $(".cl em").html(Tprice.cailiao);
+            $(".rg em").html(Tprice.rengong);
+            $(".sj em").html(Tprice.sheji);
+            $(".zj em").html(Tprice.zhijian);
+        }
+        function change_price() {
+            var num = Math.ceil(Math.random() * 20000);
+            if (parseInt($(".get_price em").html()) > 160000) {
+                init_price();
+            }
+            $(".get_price em").html(parseInt($(".get_price em").html()) + num);
+            $(".cl em").html(parseInt($(".cl em").html()) + parseInt(num / 3));
+            $(".rg em").html(parseInt($(".rg em").html()) + parseInt(num / 7));
+            $(".sj em").html(parseInt($(".sj em").html()) + parseInt(num / 200));
+            $(".zj em").html(parseInt($(".zj em").html()) + parseInt(num / 200));
+        }
+
+        
+
+
+        //打开报价弹窗
+        function tanchu_open() {
+            //$(".tanchu").css("display", "block");
+            $(".tanchu").fadeIn(700);
+            $(".tanchu").css({
+                "left": '50%',
+                "top": '50%',
+                "transform": 'scale(1)'
+            });
+
+        }
+
+        //关闭报价弹窗
+        function tanchu_close() {
+           
+            $(".tanchu").fadeOut(700);
+            
+            $(".tanchu").css({
+                "left": '98%',
+                "top": '42%',
+                "transform": 'scale(0)'
+            });
+            $(".tanchu").find(".show-get-price").hide();
+            $(".tanchu").find(".hidden-get-price").show();
+
+        }
+
+        $(function () {
+
+           
+
+            $(".tanchu .tanchu-close").click(function () {
+                tanchu_close();
+            });
+
+            init_price();
+            var t = setInterval(change_price, 200);
+            var regObj = new RegExp("[^0-9]", "g");
+            var MonTime = 12;
+
+            function Mon() {
+                var Money = ($(".tanchu-jgright-poinput").val() / MonTime) + ($(".tanchu-jgright-poinput").val() * 0.0799 * (MonTime / 12) / MonTime);
+                $(".tanchu-jgright-poshow span.jg").html(Money.toFixed(2));
+            }
+
+            $(".tanchu-jgright-poinput").change(function () {
+                Mon();
+            });
+            $(".tanchu-jgright-point-main p").click(function () {
+                var index = $(this).index() + 1;
+                MonTime = index * 12;
+                $(".tanchu-jgright-point-main").removeClass("bg1").removeClass("bg2").removeClass("bg3").addClass("bg" + index);
+                Mon();
+            });
+            $(".tanchu-jgright-poinput").keydown(function () {
+                $(this).val($(this).val().replace(regObj, ""));
+                Mon();
+            });
+            $(".tanchu-jgright-poinput").keyup(function () {
+                $(this).val($(this).val().replace(regObj, ""));
+                Mon();
+            });
+
+
+            $("input[name='Areas']").bind("input propertychange", function () {
+                var a = $(this).parents("form"), b = $(a).find("input[name='Areas']").val();
+                60 >= parseInt(b) ? ($(a).find("select[name='shi']").val("1"), $(a).find("select[name='ting']").val("1"), $(a).find("select[name='wei']").val("1")) : 60 < parseInt(b) && 90 > parseInt(b) ? ($(a).find("select[name='shi']").val("2"), $(a).find("select[name='ting']").val("1"), $(a).find("select[name='wei']").val("1")) : 90 <= parseInt(b) && 136 > parseInt(b) ? ($(a).find("select[name='shi']").val("3"), $(a).find("select[name='ting']").val("2"), $(a).find("select[name='wei']").val("2")) : 136 <= parseInt(b) && ($(a).find("select[name='shi']").val("4"), $(a).find("select[name='ting']").val("2"), $(a).find("select[name='wei']").val("2"))
+            });
+
+
+        });
+    </script>
+    <!--免费报价-->
+    <!--左边浮动-->
+    <div class="float_right_box">
+        <dl>
+            <dd><a href="javascript:LR_HideInvite();openZoosUrl();" id="fixed_xgt"><i>6</i></a></dd>
+            <dd>
+                <div class="float_right_box_tel">
+                    <input name="telInput" type="tel" maxlength="11" placeholder="请输入您的电话号码" id="telInput" /><button type="button" name="callBtn" id="callBtn">免费回电</button>
+                </div>
+            </dd>
+            <dd><a href="/HuoDong/Details/zxj180306/"></a></dd>
+            <dd><a href="javascript:void(0);" id="fixed_bj" class="fixed_bj"></a></dd>
+            <dt><a href="javascript:void(0);" id="fixed_top"></a></dt>
+        </dl>
+    </div>
+    <script language="javascript" type="text/javascript">
+
+        $(function () {
+
+                
+            $("#callBtn").click(function () {
+                lxb.call($("#telInput").val());
+            });
+
+            $(window).on('scroll', function () {
+                var $scroll = $(this).scrollTop();
+                if ($scroll >= 400) {
+                    $(".float_right_box").css("display", "block");
+                } else {
+                    $(".float_right_box").css("display", "none");
+                }
+            });
+
+      
+
+            $(".fixed_bj").click(function () {
+                tanchu_open()
+            });
+
+            $('#fixed_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+
+
+
+
+
+        });
+
+
+       
+    </script>
+    <!--左边浮动-->
+        <script>
+            $(document).ready(function () {
+
+                //计时开打报价弹窗
+                setTimeout(function () { tanchu_open(); }, 6000);
+
+             });
+        </script>
+            <!--底部浮动-->
+        <div class="float_bottom on">
+            <div class="float_bottom_box">
+                <div class="float_bottom_left"><img src="/Content/web/pc_tc_bj/images/float_bottom_left.png"></div>
+                <div class="float_bottom_max"><img src="/Content/web/pc_tc_bj/images/float_bottom_max.png"></div>
+                <div class="float_bottom_center">
+                    <form id="pc_baoming">
+                        <input type="text" name="RealName" maxlength="20" placeholder="请输入您的姓名" />
+                        <input type="tel" name="Telephone" maxlength="11" placeholder="请输入您的电话号码" />
+                        <button type="button" onclick="apply_ajax('#pc_baoming', '底部固定框');"></button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="float_bottom_close"><i></i><img src="/Content/web/pc_tc_bj/images/bottom_close.png"></div>
+        <script>
+            $(document).ready(function () {
+
+
+                
+
+                $('.float_bottom').on('click', function () {
+                    $('.float_bottom').removeClass('in');
+                    $('.float_bottom_close').css('display', 'block');
+                });
+
+                $('.float_bottom_close').on('click', 'img', function () {
+                    $('.float_bottom').addClass('in');
+                    $('.float_bottom_close').css('display', 'none');
+                });
+
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() >= 200) {
+                        if ($(".float_bottom").is('.on')) {
+                            $(".float_bottom").removeClass('on');
+                            $(".float_bottom_close").css('display', 'block');
+                        }
+
+                    } else {
+                        if ($(".float_bottom").is('.in')) {
+
+                        }
+                        else {
+                            $(".float_bottom").addClass('on').removeClass('in');
+                            $(".float_bottom_close").css('display', 'none');
+                        }
+                    };
+
+
+                });
+
+            });
+        </script>
+        <!--底部浮动-->
+
+
+
+
+    
+
+<script language="javascript" src="http://dkt.zoosnet.net/JS/LsJS.aspx?siteid=DKT94108361&float=1&lng=cn"></script>
+   
+
+
+    <div style="display:none">
+        <script src="https://s13.cnzz.com/z_stat.php?id=1262682453&web_id=1262682453" language="JavaScript"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+﻿<include file="Common/header"/>
+<link href="__HOME__/css/insidepublic.css" rel="stylesheet"/>  
+<div class="container top">
+    <h3><a href="{:U('Home/Index/index')}">首页</a>
+ &gt; <a href="{:U('Home/Anli/anli')}">精品案例</a> &gt; <strong>{$house.house_name}</strong></h3>
+  
+    <div class="clearfix"></div>
+</div>
+
+<div class="cases_details_ads"><a href="#"><img src="__HOME__/picture/cases_details_ads.jpg" alt="" /></a></div>
+
+<div class="container cases_details">
+    <div class="cases_details_left">
+           
+        <div class="cases_details_title">{$house.house_name}</div>
+        <div class="cases_details_title_detaileds">
+            <foreach name="type" item="value">
+            <eq name="house.type_id" value="$value.id">
+                <label>{$value.type_name}</label>
+            </eq>
+            </foreach>
+            <foreach name="style" item="value">
+            <eq name="house.style_id" value="$value.id">
+                <label>{$value.style_name}</label>
+            </eq>
+            </foreach>
+            <label>{$house.size}m&sup2</label>
+            <span class="cases_details_loves"><i>{$house.buy}</i>喜欢</span>
+            <span><i>{$house.buy}</i>人气</span>
+        </div>
+        <div class="cases_details_table">
+            <h2>工程造价</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="bold">主才品牌</td>
+                        <td>瓷砖</td>
+                        <td>地板</td>
+                        <td>橱柜</td>
+                        <td>室内门</td>
+                        <td>五金</td>
+                        <td>洁具</td>
+                        <td>吊顶</td>
+
+                    </tr>
+                    <tr>
+                        <td>{$house.vitrolite_brand}</td>
+                        <td>{$house.floor_brand }</td>
+                        <td>{$house.cupboard_brand}</td>
+                        <td>{$house.door_brand}</td>
+                        <td>{$house.hardware_brand}</td>
+                        <td>{$house.clean_brand}</td>
+                        <td>{$house.top_brand}</td>
+
+                    </tr>
+                    <tr>
+                        <td class="bold">总费用</td>
+                        <td>
+                            {$house.all_price}万
+                        </td>
+                        <td class="bold">主材金额</td>
+                        <td>
+                            {$house.main_price}万
+                        </td>
+                        <td class="bold">辅材金额</td>
+                        <td>
+                            {$house.auxiliary_price}万
+                        </td>
+                        <td class="bold">工程费用</td>
+                        <td>
+                            {$house.engineering}万
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cases_details_show"><p>
+            {$house.content|html_entity_decode}
+        </div>
+
+
+    </div>
+    <div class="cases_details_right" style="position: relative">
+        <p id="placeholder" style="position:absolute;left:0;top:-16px;"></p>
+        <div class="cases_baojia">
+            <h3><img src="__HOME__/picture/cases_baojia.jpg" alt="" /></h3>
+            <form id="cases_baojia">
+                <input type="hidden" name="house_id" value="{$house.id}">
+                <select name="level" class="level">
+                    <option value="">装修档次</option>
+                    <option value="豪华装修">豪华装修</option>
+                    <option value="精品装修">精品装修</option>
+                    <option value="简单装修">简单装修</option>
+                </select>
+                <input name="area" class="areas" placeholder="建筑面积" value="" maxlength="20" type="number" />
+                <input name="guestbook_name" class="realname" placeholder="输入您的称呼" value="" maxlength="20" type="text" />                
+                <input name="phone" class="telephone" placeholder="输入号码，报价结果将发送到手机" value="" maxlength="11" type="text" />
+                <button type="button" id="button">快速报价</button>
+            </form>
+            <p>我们承诺：绝不产生任何费用，为了您的利益以及我们的口碑，您的隐私将被严格保密。</p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<script>
+    //Ajax留言
+    $('#cases_baojia #button').click(function(){
+        var guestbook_name=$('#cases_baojia .realname').val();
+        var phone=$('#cases_baojia .telephone').val();
+        var level=$('#cases_baojia .level').val();
+        var area=$('#cases_baojia .areas').val();
+        $.ajax({
+            type:'post',
+            url:"{:U('Home/Anli/guestbook')}",
+            data:'guestbook_name='+guestbook_name+'&phone='+phone+'&level='+level+'&area='+area,
+            dataType:"text",
+            success:function(z){
+                if(z==1){
+                    alert('报价成功');
+                    $('#placeholder').html('报价成功!!');
+                    $('#placeholder').fadeIn(100);
+                    $('#placeholder').fadeOut(5000);
+                    $('#cases_baojia .areas').val('');
+                }else{
+                    alert(z);
+                }
+            }
+        })
+        return false;
+    })
+</script>   
+<include file="Common/footer"/>

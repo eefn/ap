@@ -1,0 +1,3 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($news)): foreach($news as $key=>$value): ?><dl><a href="<?php echo U('Home/news/news_art/id/'.$value['id']);?>"><dt><img src="/ap/Public/<?php echo ($value["image"]); ?>" alt="<?php echo ($value["title"]); ?>" /></dt><dd><h4><?php echo ($value["title"]); ?></h4><p><?php echo (substr(html_entity_decode($value["content"]),0,130)); ?>
+</p><span><i class="time"><?php echo (date("y-m-d",$value["addtime"])); ?></i><i class="views"><?php echo ($value["click"]); ?>次</i></span></dd></a></dl><?php endforeach; endif; ?>
+<?php echo ($show); ?>

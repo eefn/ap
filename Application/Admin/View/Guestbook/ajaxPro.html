@@ -1,0 +1,37 @@
+<foreach name="guestbook" item="v">
+                                    <tr>
+                                        <td>
+                                            <span class="count">{$a++}</span>
+                                        </td>
+                                         <td >
+                                            {$v.guestbook_name}
+                                        </td>   
+                                        <td >
+                                           {$v.addtime|date="Y-m-d",###}
+                                        </td>
+                                        <td >
+                                             {$v.phone}
+                                        </td>
+                                        <td >
+                                             {$v.level}
+                                        </td>
+                                        <td >
+                                             {$v.area}
+                                        </td>
+                                        <td class="click" value="{$v.id}" is_read="{$v.is_read}">
+                                        <eq name="v['is_read']" value="1">
+                                            <img src="__ADMIN__/img/yes.gif">
+                                        <else/>
+                                            <img src="__ADMIN__/img/no.gif">
+                                        </eq>
+                                        
+                                        </td>            
+                                        <td>
+                                            <a href="{:U('Admin/Guestbook/guestbook_edit/id/'.$v['id'])}" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a> 
+                                            <a href="javascript:void(0)" class="btn btn-white btn-sm del" del_id="{$v.id}"><i class="fa fa-trash"></i> 删除 </a>
+                                        </td>
+                                    </tr>
+         </foreach>
+<tr>
+    <td colspan="9" class="page">{$show}</td>
+</tr>

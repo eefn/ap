@@ -1,0 +1,90 @@
+﻿.block{display:block}
+.none{display:none}
+.fl{float:left}
+.fr{float:right}
+.of{overflow:hidden}
+
+.bg{ margin-top:20px;width:100%;background:#fff}
+
+.top{ height:50px; line-height:50px;}
+.top h3{ float:left; padding-left:50px; height:100%; color:#929292; font-weight:normal; background:url(../images/top_h.png) no-repeat 23px center;}
+.top h3 a{ color:#929292;}
+.top h3 strong{ color:#f25618;}
+.top span{ display:inline; float:right; margin-right:20px; padding-right:55px; background:url(../images/top_span.png) no-repeat right center;}
+.top_line{ border-bottom:#bcbcbc solid 1px;}
+
+.container{margin:auto;width:1200px}
+.title{box-sizing:border-box;margin:10px;height:40px;color:#999;font-size:14px;margin-top: 30px;}
+.title span{margin-right:10px;font-weight:700;font-size:24px;color:#282828;}
+.btn,.title a{float:right;padding:5px 10px;padding-right:20px;border:1px solid #999;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;background:#fff url(../images/zxkt-btn.jpg) no-repeat 70px center;font-size:14px}
+.btn{position:absolute;top:202px;left:70px;width:81px;background-position:87px center;text-align:center;border: none;height: 20px;line-height: 20px}
+#lc { margin-top:-25px;}
+
+#lc>ul>li{float:left;margin:0 5px 0;width:390px;height:450px;background:#fff}
+#lc .lable{overflow:hidden;margin-top:-3px;width:100%;height:194px}
+#lc .lable-1 a{padding-top:68px;width:20%;height:193px}
+#lc .lable a:hover{background:#017f40;color:#fff;}
+#lc .lable-2 a{padding-top:24px;width:25%;height:96.5px}
+#lc .lable-3 a{padding-top:68px;width:50%;height:193px}
+#lc .lable a{float:left;display:inline-block;box-sizing:border-box;text-align:center}
+#lc .lable a i{display:block;margin:auto;width:30px;height:37px;background:url(../images/xzx.png) no-repeat}
+#lc .lable a i.hover1{background-position:2px 0}
+#lc .lable a:hover i.hover1{background-position:2px -38px}
+#lc .lable a i.hover2{background-position:-31px 0}
+#lc .lable a:hover i.hover2{background-position:-31px -38px}
+#lc .lable a i.hover3{background-position:-68px 0}
+#lc .lable a:hover i.hover3{background-position:-68px -38px}
+#lc .lable a i.hover4{background-position:-101px 0}
+#lc .lable a:hover i.hover4{background-position:-101px -38px}
+#lc .lable a i.hover5{background-position:-140px 0}
+#lc .lable a:hover i.hover5{background-position:-140px -38px}
+#lc .lable a i.hover6{background-position:-176px 0}
+#lc .lable a:hover i.hover6{background-position:-176px -38px}
+#lc .lable a i.hover7{background-position:-215px 0}
+#lc .lable a:hover i.hover7{background-position:-215px -38px}
+#lc .lable a i.hover8{background-position:-252px 0}
+#lc .lable a:hover i.hover8{background-position:-252px -38px}
+#lc .lable a i.hover9{background-position:-290px 0}
+#lc .lable a:hover i.hover9{background-position:-290px -38px}
+#lc .lable a i.hover10{background-position:-327px 0}
+#lc .lable a:hover i.hover10{background-position:-327px -38px}
+#lc .lable a i.hover11{background-position:-365px 0}
+#lc .lable a:hover i.hover11{background-position:-365px -38px}
+#lc .lable a i.hover12{background-position:-397px 0}
+#lc .lable a:hover i.hover12{background-position:-397px -38px}
+#lc .lable a i.hover13{background-position:-433px 0}
+#lc .lable a:hover i.hover13{background-position:-433px -38px}
+#lc .lable a i.hover14{background-position:-470px 0}
+#lc .lable a:hover i.hover14{background-position:-470px -38px}
+#lc .lable a i.hover15{background-position:-504px 0}
+#lc .lable a:hover i.hover15{background-position:-504px -38px}
+.zx .left{box-sizing:border-box;width:800px;padding-bottom: 30px;}
+.zxsj>div{box-sizing:border-box;margin-right:10px;width:380px;height:290px}
+.zxsj>div dd{padding-left:10px;height:40px;font-size:14px;line-height:40px}
+.zxsj>div dd a{border-left: 1px solid #999;padding-left: 10px}
+.zxsj .sj{position: relative;}
+.zxsj .sj img{width:100%;height:100%;}
+.zxsj .sj p{position: absolute;bottom:0px;height: 40px;line-height:40px;background: rgba(0,0,0,0.7);width: 100%;text-align: center;color: #fff;font-size: 14px;}
+
+.zx .right{box-sizing:border-box;padding-left:10px;width:400px}
+.zx .right .rj{margin-bottom:20px;padding-right:10px;height:100px;}
+
+.zx .right .rj img{float:left;margin-right:15px; width:130px; height:100px;}
+.zx .right div h6{font-weight:700;font-size:14px;line-height:30px}
+.zx .right div p{font-size:12px;line-height:20px}
+.fs>div{position:relative;display:inline-block}
+.rj div{height:100px;border-bottom:1px #aaa dashed;padding-bottom: 10px;}
+.bottom{margin-top:40px}
+.fs .news{padding:10px;width:500px;height:248px;background:#fff}
+.fs .news dd{padding-left:10px;height:35px;font-size:14px;line-height:35px}
+.fs .news dd a{border-left: 1px solid #999;padding-left: 10px}
+.question{margin-top:10px;padding-bottom: 20px;}
+.question div{position:relative}
+.question .pic{margin-left:5px}
+.question .pic div{margin:20px 5px; position:relative;width:295px;height:228px}
+
+.question .pic img{ width:295px; height:228px;}
+
+.question .pic div p{position: absolute;bottom:0px;height: 40px;line-height:40px;background: rgba(0,0,0,0.7);width: 100%;text-align: center;color: #fff;font-size: 14px;}
+
+.banner img{ width:100%;}
